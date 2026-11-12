@@ -1,0 +1,89 @@
+name: Test and deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hostinger-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, pdo_sqlite, pdo_mysql, gd, bcmath, zip
+          coverage: none
+      - run: composer install --prefer-dist --no-interaction --no-progress
+      - run: |
+          cp .env.example .env
+          php artisan key:generate
+          php artisan test
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: |
+          composer install --no-dev --prefer-dist --no-interaction --no-progress --optimize-autoloader
+          tar --exclude=.git --exclude=.github --exclude=.env --exclude=node_modules --exclude=tests --exclude=storage --exclude=bootstrap/cache --exclude=public/tickets --exclude=public/qr-codes -czf /tmp/film-fest.tar.gz .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: production-build
+          path: /tmp/film-fest.tar.gz
+          retention-days: 3
+
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.HOSTINGER_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    env:
+      SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+      SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+      SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+      APP_PATH: ${{ vars.HOSTINGER_APP_PATH }}
+      PHP_BIN: ${{ vars.HOSTINGER_PHP_BIN || 'php' }}
+      HEALTH_URL: ${{ vars.HOSTINGER_HEALTH_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: production-build
+      - name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.HOSTINGER_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_HOST" && test -n "$SSH_USER" && test -n "$SSH_KEY" && test -n "$KNOWN_HOSTS"
+          [[ "$SSH_PORT" =~ ^[0-9]+$ ]]
+          [[ "$SSH_HOST" =~ ^[a-zA-Z0-9.-]+$ ]]
+          [[ "$SSH_USER" =~ ^[a-zA-Z0-9_-]+$ ]]
+          [[ "$APP_PATH" =~ ^/home/[a-zA-Z0-9_./-]+$ ]] && [[ "$APP_PATH" != *..* ]]
+          [[ "$PHP_BIN" =~ ^[a-zA-Z0-9_./-]+$ ]]
+          [[ "$HEALTH_URL" == https://* ]]
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_ed25519 ~/.ssh/known_hosts
+      - name: Upload and deploy
+        run: |
+          set -euo pipefail
+          target="$SSH_USER@$SSH_HOST"
+          remote_archive="/tmp/film-fest-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar.gz"
+          scp -P "$SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes film-fest.tar.gz "$target:$remote_archive"
+          ssh -p "$SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$target" "bash -s -- '$APP_PATH' '$PHP_BIN' '$remote_archive'" < scripts/deploy-hostinger.sh
+      - name: Check production health
+        run: curl --fail --silent --show-error --retry 3 --retry-delay 5 --retry-all-errors --connect-timeout 15 --max-time 60 "$HEALTH_URL"
