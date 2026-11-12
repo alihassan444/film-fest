@@ -1,0 +1,37 @@
+﻿.ticket-summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px; margin-bottom: 24px; border-radius: 18px; border: 1px solid #997548; background: radial-gradient(ellipse at 100% 0, rgba(206,172,115,.14), transparent 60%), linear-gradient(120deg, #432813, #140C08); }
+.ticket-summary-identity { display: flex; align-items: center; gap: 18px; min-width: 0; }
+.ticket-summary-icon { display: grid; place-items: center; width: 54px; height: 54px; flex: 0 0 54px; background: rgba(206,172,115,.12); color: #EED29D; border: 1px solid rgba(206,172,115,.3); border-radius: 14px; font-size: 26px; }
+.ticket-summary-label { display: block; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #CEAC73; margin-bottom: 8px; }
+.ticket-summary h2 { font-size: clamp(19px, 2vw, 26px); color: #F8F3E1; letter-spacing: .04em; margin: 0 0 8px; overflow-wrap: anywhere; }
+.ticket-summary p { color: #D3CDC2; font-size: 11px; margin: 0; }
+.ticket-summary > .status-badge { flex-shrink: 0; padding: 8px 12px; }
+.ticket-detail-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr); gap: 24px; align-items: start; }
+.ticket-detail-main, .ticket-detail-aside { display: grid; gap: 24px; min-width: 0; }
+.attendee-details { display: grid; grid-template-columns: 1fr 1fr; margin: 0; padding: 6px 26px 20px; column-gap: 24px; }
+.attendee-details > div { padding: 18px 0; border-bottom: 1px solid #eee8dc; min-width: 0; }
+.attendee-details dt { font-size: 10px; color: #6E6A60; font-weight: 500; margin-bottom: 8px; }
+.attendee-details dd { color: #2A180D; font-size: 13px; font-weight: 600; margin: 0; line-height: 1.6; overflow-wrap: anywhere; }
+.ticket-receipt-preview { background: #F8F3E1; padding: 24px; }
+.ticket-receipt-preview > a { display: block; }
+.ticket-receipt-preview img { display: block; max-width: 100%; max-height: 500px; width: auto; height: auto; margin: auto; border: 1px solid #D2C3A6; border-radius: 10px; }
+.ticket-activity { list-style: none; margin: 0; padding: 24px 26px 6px; }
+.ticket-activity li { position: relative; margin-left: 6px; border-left: 1px solid #D2C3A6; padding: 0 0 26px 24px; }
+.ticket-activity li:last-child { border-left-color: transparent; padding-bottom: 16px; }
+.ticket-activity-dot { position: absolute; left: -5px; top: 3px; width: 9px; height: 9px; border-radius: 50%; background: #997548; border: 2px solid #F0E5CB; }
+.ticket-activity-pending .ticket-activity-dot { background: #fff; border-color: #997548; }
+.ticket-activity strong { display: block; color: #432813; font-size: 12px; }
+.ticket-activity time, .ticket-activity p { display: block; color: #6E6A60; font-size: 11px; line-height: 1.7; margin: 7px 0 0; overflow-wrap: anywhere; }
+.ticket-management-actions { display: flex; flex-direction: column; gap: 10px; padding: 0 24px 24px; }
+.ticket-management-actions form { margin: 0; }
+.ticket-management-actions form > button { width: 100%; }
+.ticket-qr-panel { padding-bottom: 22px; text-align: center; }
+.ticket-qr-panel .admin-card-header { text-align: left; }
+.ticket-qr-image { padding: 22px; }
+.ticket-qr-image img { max-width: 100%; width: 180px; height: auto; background: white; padding: 10px; border: 1px solid #D2C3A6; border-radius: 12px; }
+.ticket-qr-note { color: #6E6A60; font-size: 10px; line-height: 1.8; margin: 18px 24px 0; }
+.ticket-media-empty { padding: 30px 20px; text-align: center; }
+.ticket-media-empty > i { color: #997548; font-size: 30px; }
+.ticket-media-empty p { color: #6E6A60; font-size: 12px; margin: 12px 0 0; }
+@media (max-width: 1199px) { .ticket-detail-grid { grid-template-columns: 1fr; } .ticket-detail-aside { grid-template-columns: 1fr 1fr; align-items: start; } }
+@media (max-width: 767px) { .ticket-detail-aside { grid-template-columns: 1fr; } .ticket-summary { flex-wrap: wrap; padding: 20px; } .ticket-summary-icon { display: none; } }
+@media (max-width: 479px) { .attendee-details { grid-template-columns: 1fr; padding: 0 20px 20px; } .ticket-receipt-preview { padding: 16px; } }

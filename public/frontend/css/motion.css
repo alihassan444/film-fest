@@ -1,0 +1,86 @@
+/* Shared motion stays decorative: content is visible even without JavaScript. */
+:root { --motion-ease: cubic-bezier(.22, 1, .36, 1); }
+/* Native scrollbars retain keyboard, touch and high-contrast support. */
+html, body, body * {
+    scrollbar-width: thin;
+    scrollbar-color: #997548 #F0E5CB;
+}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #F0E5CB; border-radius: 12px; }
+::-webkit-scrollbar-thumb {
+    background: #997548;
+    border: 2px solid #F0E5CB;
+    border-radius: 12px;
+    min-height: 40px;
+}
+::-webkit-scrollbar-thumb:hover { background: #674829; }
+::-webkit-scrollbar-thumb:active { background: #57381D; }
+::-webkit-scrollbar-corner { background: #F0E5CB; }
+::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+@media (forced-colors: active) {
+    html, body, body * { scrollbar-color: auto; scrollbar-width: auto; }
+}
+html { scroll-padding-top: 96px; }
+.navbar { transition: box-shadow .25s ease, background-color .25s ease; }
+.navbar.festival-nav { transition: top .25s ease, border-radius .25s ease, background-color .25s ease, box-shadow .25s ease; }
+.navbar.is-scrolled { box-shadow: 0 6px 24px rgba(20, 12, 8, .18); }
+.btn, .custom-btn, .custom-btn-admin, .admin-logout {
+    transition: transform .22s var(--motion-ease), box-shadow .22s ease, background-color .22s ease, color .22s ease;
+}
+.btn:active, .custom-btn:active, .custom-btn-admin:active { transform: scale(.97); }
+.form-control, .form-select { transition: border-color .2s ease, box-shadow .2s ease; }
+.artists-image { transition: transform .65s var(--motion-ease); }
+.pricing-thumb, .admin-card, .admin-stat-card { transition: box-shadow .25s ease, border-color .25s ease; }
+.navbar-nav .nav-link { text-underline-offset: 7px; text-decoration-thickness: 2px; }
+.navbar-nav .nav-link:focus-visible { text-decoration: underline; }
+.festival-nav .navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    transition: color .25s ease;
+}
+.festival-nav .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 3px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #997548, #F0DDB3, #997548);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .4s var(--motion-ease), opacity .3s ease, box-shadow .3s ease;
+    pointer-events: none;
+}
+.festival-nav .navbar-nav .nav-link.active::after {
+    opacity: .7;
+    transform: scaleX(.5);
+}
+.festival-nav .navbar-nav .nav-link:focus-visible { text-decoration: none; }
+.festival-nav .navbar-nav .nav-link:focus-visible::after {
+    opacity: 1;
+    transform: scaleX(1);
+    box-shadow: 0 2px 10px rgba(238, 210, 157, .4);
+}
+@media (hover: hover) and (pointer: fine) {
+    .btn:hover, .custom-btn:hover, .custom-btn-admin:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(42, 24, 13, .16); }
+    #section_3 .artists-thumb:hover .artists-image { transform: scale(1.035); }
+    .pricing-thumb:hover, .admin-card:hover { box-shadow: 0 12px 30px rgba(42, 24, 13, .1); }
+    .navbar-nav .nav-link:hover { text-decoration: underline; }
+    .festival-nav .navbar-nav .nav-link:hover { text-decoration: none; color: #F0DDB3; }
+    .festival-nav .navbar-nav .nav-link:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+        box-shadow: 0 2px 10px rgba(238, 210, 157, .4);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
