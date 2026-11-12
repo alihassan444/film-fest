@@ -4,7 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
-return Application::configure(basePath: dirname(__DIR__))
+$app = Application::configure(basePath: dirname(__DIR__))
     ->withEvents(discover: false)
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
@@ -28,3 +28,10 @@ return Application::configure(basePath: dirname(__DIR__))
             return response()->view('errors.413', ['message' => $message], 413);
         });
     })->create();
+
+// Written only on the deployment host when its public folder is separate.
+if (is_file(__DIR__.'/public-path.php')) {
+    $app->usePublicPath(require __DIR__.'/public-path.php');
+}
+
+return $app;

@@ -20,6 +20,7 @@
 /public/storage
 /public/tickets/
 /public/qr-codes/
+/bootstrap/public-path.php
 /storage/*.key
 /storage/pail
 /vendor

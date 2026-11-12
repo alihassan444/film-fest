@@ -53,6 +53,7 @@ jobs:
       SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
       SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
       APP_PATH: ${{ vars.HOSTINGER_APP_PATH }}
+      PUBLIC_PATH: ${{ vars.HOSTINGER_PUBLIC_PATH }}
       PHP_BIN: ${{ vars.HOSTINGER_PHP_BIN || 'php' }}
       HEALTH_URL: ${{ vars.HOSTINGER_HEALTH_URL }}
     steps:
@@ -71,6 +72,7 @@ jobs:
           [[ "$SSH_HOST" =~ ^[a-zA-Z0-9.-]+$ ]]
           [[ "$SSH_USER" =~ ^[a-zA-Z0-9_-]+$ ]]
           [[ "$APP_PATH" =~ ^/home/[a-zA-Z0-9_./-]+$ ]] && [[ "$APP_PATH" != *..* ]]
+          [[ "$PUBLIC_PATH" =~ ^/home/[a-zA-Z0-9_./-]+$ ]] && [[ "$PUBLIC_PATH" != *..* ]]
           [[ "$PHP_BIN" =~ ^[a-zA-Z0-9_./-]+$ ]]
           [[ "$HEALTH_URL" == https://* ]]
           mkdir -p ~/.ssh
@@ -84,6 +86,6 @@ jobs:
           target="$SSH_USER@$SSH_HOST"
           remote_archive="/tmp/film-fest-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar.gz"
           scp -P "$SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes film-fest.tar.gz "$target:$remote_archive"
-          ssh -p "$SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$target" "bash -s -- '$APP_PATH' '$PHP_BIN' '$remote_archive'" < scripts/deploy-hostinger.sh
+          ssh -p "$SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$target" "bash -s -- '$APP_PATH' '$PHP_BIN' '$remote_archive' '$PUBLIC_PATH'" < scripts/deploy-hostinger.sh
       - name: Check production health
         run: curl --fail --silent --show-error --retry 3 --retry-delay 5 --retry-all-errors --connect-timeout 15 --max-time 60 "$HEALTH_URL"
