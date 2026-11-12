@@ -380,6 +380,8 @@ php artisan queue:restart
 | SSH connection times out | SSH enabled, host/port correct, hosting firewall/restrictions checked with Hostinger |
 | PHP/platform check fails | CLI PHP 8.3 and required extensions enabled; set HOSTINGER_PHP_BIN to the verified executable |
 | flock not found | Ask Hostinger about flock availability; the current deployment script requires it |
+| Undefined function exec() during storage linking | Use the latest deployment script, which creates the storage symlink with shell ln rather than PHP storage:link |
+| Storage link points elsewhere or storage is a real directory | Inspect and back up that path; deployment refuses to replace it automatically |
 | Database connection error | Full prefixed database name/user, assigned privileges, host and password in production .env |
 | 403/404 or default page | Correct subdomain document root, DNS, public/index.php and public/.htaccess |
 | 500 error | Inspect storage/logs/laravel.log privately and check PHP extensions, database and writable directories |

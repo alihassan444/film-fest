@@ -54,7 +54,20 @@ PHP
 "$php_bin" artisan package:discover --ansi
 "$php_bin" vendor/composer/platform_check.php
 "$php_bin" artisan migrate --force
-"$php_bin" artisan storage:link
+# Shared hosting may disable PHP symlink()/exec(); use the SSH shell instead.
+storage_link="$public_path/storage"
+storage_target="$app_path/storage/app/public"
+if [[ -L "$storage_link" ]]; then
+  [[ "$(readlink -f -- "$storage_link")" == "$(readlink -f -- "$storage_target")" ]] || {
+    echo "Storage link points to a different location: $storage_link. Review it before retrying." >&2
+    exit 1
+  }
+elif [[ -e "$storage_link" ]]; then
+  echo "Storage path already exists and is not a symlink: $storage_link. Back it up and review it before retrying." >&2
+  exit 1
+else
+  ln -s -- "$storage_target" "$storage_link"
+fi
 "$php_bin" artisan config:cache
 "$php_bin" artisan view:cache
 "$php_bin" artisan queue:restart
