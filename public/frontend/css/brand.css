@@ -223,6 +223,67 @@
 .schedule-closing { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 28px; }
 .schedule-closing p { color: #D3CDC2; font-size: 13px; margin: 0; }
 .schedule-closing p i { color: #CEAC73; margin-right: 8px; }
+.festival-schedule .row > .col-md-6 { display: flex; flex-direction: column; }
+.festival-schedule .schedule-day-card { height: auto; flex: 1; }
+.schedule-submission { flex-direction: column; align-items: flex-start; gap: 14px; }
+.schedule-ticket { justify-content: flex-end; }
+.schedule-book-btn:disabled { background: #F0DDB3; color: #2A180D; opacity: .65; }
+
+/* Submission: the official flyer's warm paper, brass and cinema palette. */
+.submission-page { padding: 125px 0 72px; background: #f3e7d2; color: #392817; overflow: hidden; }
+.submission-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
+.submission-eyebrow { display: block; color: #795a31; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; margin-bottom: 18px; }
+.submission-intro h1 { color: #392817; font-size: clamp(48px, 5.8vw, 82px); letter-spacing: -.055em; line-height: 1.06; margin-bottom: 25px; }
+.submission-intro h1 em { font-family: Georgia, serif; font-weight: 400; color: #8b6533; }
+.submission-lead { color: #6b5a46; font-size: 16px; line-height: 1.9; max-width: 460px; margin-bottom: 30px; }
+.submission-primary { display: inline-flex; justify-content: center; align-items: center; gap: 30px; padding: 15px 25px; border: 1px solid #57381d; border-radius: 40px; background: #57381d; color: #fff2da; font-weight: 700; font-size: 14px; }
+.submission-primary:hover, .submission-primary:focus-visible { background: #2a180d; color: #fff2da; border-color: #2a180d; }
+.submission-screening { display: flex; align-items: center; gap: 16px; margin-top: 32px; }
+.submission-screening > i { font-size: 25px; color: #8b6533; }
+.submission-screening span, .submission-screening small, .submission-screening strong { display: block; }
+.submission-screening span { font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: #79664c; }
+.submission-screening strong { font-size: 19px; margin: 4px 0; }
+.submission-screening small { color: #79664c; font-size: 12px; }
+.submission-art { position: relative; min-height: 530px; border-radius: 160px 160px 24px 24px; background: #b7a187 url('/frontend/images/submission-flyer.jpg') center 72% / 150% auto no-repeat; box-shadow: 0 24px 65px #57381d20; border: 1px solid #b39a70; }
+.submission-art-label { position: absolute; bottom: 20px; left: 20px; right: 20px; padding: 12px; border-radius: 20px; background: #f3e7d2eb; text-align: center; font-family: Georgia, serif; font-style: italic; font-size: 17px; color: #57381d; }
+.submission-art-mark { position: absolute; top: 24px; right: 25px; width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid #f3e7d2; border-radius: 50%; background: #57381d; color: #f3e7d2; font-family: Georgia, serif; font-size: 27px; }
+.submission-categories { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px; border-top: 1px solid #cdbb9c; border-bottom: 1px solid #cdbb9c; margin: 55px 0 65px; padding: 26px 0; }
+.submission-categories span { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; }
+.submission-categories i { color: #8b6533; font-size: 20px; }
+.submission-fees-heading { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 28px; }
+.submission-page h2 { color: #392817; font-size: clamp(28px, 3vw, 39px); letter-spacing: -.035em; }
+.submission-fees-heading p, .submission-register p { color: #6b5a46; font-size: 14px; line-height: 1.8; margin: 0; }
+.submission-fees { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.submission-fee { padding: 32px; background: #eadbc2; border: 1px solid #c6ad85; border-radius: 22px; }
+.submission-fee-early { background: #e5d0aa; }
+.submission-fee-top { display: flex; align-items: center; justify-content: space-between; color: #795a31; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+.submission-fee-top i { font-size: 23px; }
+.submission-fee .submission-amount { color: #392817; font-size: clamp(46px, 5vw, 64px); font-weight: 700; letter-spacing: -.04em; margin: 24px 0 12px; line-height: 1; }
+.submission-amount small { font-size: 19px; font-weight: 400; letter-spacing: 0; }
+.submission-fee h3 { color: #6b5a46; font-size: 15px; font-weight: 400; margin: 0 0 28px; }
+.submission-fee .submission-deadline { border-top: 1px solid #bfa57c; padding-top: 20px; color: #5d4830; font-size: 12px; margin: 0; }
+.submission-deadline i { margin-right: 7px; }
+.submission-register { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 48px 0 0; }
+.submission-register .submission-primary { flex-shrink: 0; }
+@media (max-width: 767px) {
+    .submission-page { padding-top: 105px; }
+    .submission-hero, .submission-fees { grid-template-columns: 1fr; gap: 28px; }
+    .submission-art { min-height: 460px; max-width: 520px; width: 100%; justify-self: center; }
+    .submission-fees-heading, .submission-register { flex-direction: column; align-items: flex-start; }
+    .submission-categories { justify-content: flex-start; column-gap: 28px; margin: 35px 0 45px; }
+    .submission-fee { padding: 26px; }
+}
+@media (min-width: 768px) {
+    .festival-schedule .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .festival-schedule .row > .col-md-6 {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 2;
+        width: 100%;
+        row-gap: 0;
+    }
+    .festival-schedule .schedule-closing { align-self: start; }
+}
 .schedule-book-btn { display: inline-flex; align-items: center; gap: 18px; background: #F0DDB3; color: #2A180D; font-size: 12px; font-weight: 700; border-radius: 30px; padding: 11px 18px; }
 .schedule-book-btn:hover, .schedule-book-btn:focus-visible { background: #EBC481; color: #140C08; }
 @media (hover: hover) and (pointer: fine) {

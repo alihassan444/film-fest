@@ -45,7 +45,7 @@
                     <div class="date-wrap mb-3 mb-lg-0">
                         <h5 class="text-white mb-0">
                             <i class="custom-icon bi-clock me-2"></i>
-                            10-11<sup>th</sup>, Dec 2025
+                            9–11 December 2026
                         </h5>
                     </div>
 
@@ -222,15 +222,15 @@
     <section class="schedule-section festival-schedule section-padding" id="section_4" aria-labelledby="schedule-title">
         <div class="container">
             <div class="schedule-heading">
-                <div><span class="schedule-eyebrow">The festival programme</span><h2 id="schedule-title">Two days.<br>Stories that stay.</h2></div>
+                <div><span class="schedule-eyebrow">The festival programme</span><h2 id="schedule-title">Three days.<br>Stories that stay.</h2></div>
                 <p>From the big screen to a night of music.<br>Explore what's on at Film Fest-26.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-12">
                     <article class="schedule-day-card">
                         <header class="schedule-card-header">
-                            <span class="schedule-day-label">Day 01 <span>Cinema</span></span>
-                            <div class="schedule-date"><strong>10</strong><span>December</span></div>
+                            <span class="schedule-day-label">9–11 December 2026 <span>Cinema</span></span>
+                            <div class="schedule-date"><strong>9–11</strong><span>December</span></div>
                         </header>
                         <div class="schedule-card-content">
                             <span class="schedule-event-icon" aria-hidden="true"><i class="bi bi-film"></i></span>
@@ -241,11 +241,15 @@
                         </div>
                         <div class="schedule-card-bottom"><i class="bi bi-geo-alt" aria-hidden="true"></i> IAC Amphitheatre</div>
                     </article>
+                    <div class="schedule-closing schedule-submission" id="submission" aria-label="Film submissions">
+                        <a class="btn schedule-book-btn" href="{{ route('submission') }}">Submission <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                        <p><i class="bi bi-stars" aria-hidden="true"></i> Share your vision. Submit your film or video for festival consideration.</p>
+                    </div>
                 </div>
                 <div class="col-md-6 col-12">
                     <article class="schedule-day-card schedule-music-card">
                         <header class="schedule-card-header">
-                            <span class="schedule-day-label">Day 02 <span>Live music</span></span>
+                            <span class="schedule-day-label">Day 03 <span>Live music</span></span>
                             <div class="schedule-date"><strong>11</strong><span>December</span></div>
                         </header>
                         <div class="schedule-card-content">
@@ -257,9 +261,11 @@
                         </div>
                         <div class="schedule-card-bottom"><i class="bi bi-geo-alt" aria-hidden="true"></i> IAC Amphitheatre</div>
                     </article>
+                    <div class="schedule-closing schedule-ticket">
+                        <a class="btn schedule-book-btn" href="{{ route('form') }}">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="schedule-closing"><p><i class="bi bi-stars" aria-hidden="true"></i> Make it a festival to remember.</p><a class="btn schedule-book-btn" href="{{ route('form') }}">Book your ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
         </div>
     </section>
 

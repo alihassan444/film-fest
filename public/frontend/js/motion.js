@@ -9,7 +9,7 @@
         '.pricing-thumb', '.festival-price-card', '.schedule-heading', '.schedule-day-card', '.google-map',
         '.ticket-form', '.footer-venue-panel', '.site-footer-top .col-lg-6', '.admin-page-head',
         '.admin-content .card', '.admin-card', '.admin-stat-card', '.admin-alert',
-        '#app main .card'
+        '#app main .card', '.submission-intro > *', '.submission-art', '.submission-fee', '.submission-register'
     ];
     const targets = [...document.querySelectorAll(selectors.join(','))];
     const reveal = element => {
