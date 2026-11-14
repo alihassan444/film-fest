@@ -23,9 +23,9 @@
     <link href="{{asset('frontend/css/bootstrap-icons.css')}}" rel="stylesheet">
 
     <link href="{{asset('frontend/css/templatemo-festava-live.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/brand.css')}}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/motion.css') }}" rel="stylesheet">
-    <script src="{{ asset('frontend/js/motion.js') }}" defer></script>
+    <link href="{{ asset('frontend/css/brand.css') }}?v={{ filemtime(public_path('frontend/css/brand.css')) }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/motion.css') }}?v={{ filemtime(public_path('frontend/css/motion.css')) }}" rel="stylesheet">
+    <script src="{{ asset('frontend/js/motion.js') }}?v={{ filemtime(public_path('frontend/js/motion.js')) }}" defer></script>
 
     <!--
 
@@ -227,8 +227,8 @@ T e m p l a t e M o
     <!-- JAVASCRIPT FILES -->
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('frontend/js/click-scroll.js')}}"></script>
-    <script src="{{asset('frontend/js/custom.js')}}"></script>
+    <script src="{{ asset('frontend/js/click-scroll.js') }}?v={{ filemtime(public_path('frontend/js/click-scroll.js')) }}"></script>
+    <script src="{{ asset('frontend/js/custom.js') }}?v={{ filemtime(public_path('frontend/js/custom.js')) }}"></script>
 
 </body>
 

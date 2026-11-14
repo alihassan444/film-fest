@@ -12,8 +12,8 @@
     <link href="{{ asset('frontend/css/brand.css') }}" rel="stylesheet">
     @stack('styles')
     <link href="{{ asset('admin/css/workspace.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/motion.css') }}" rel="stylesheet">
-    <script src="{{ asset('frontend/js/motion.js') }}" defer></script>
+    <link href="{{ asset('frontend/css/motion.css') }}?v={{ filemtime(public_path('frontend/css/motion.css')) }}" rel="stylesheet">
+    <script src="{{ asset('frontend/js/motion.js') }}?v={{ filemtime(public_path('frontend/js/motion.js')) }}" defer></script>
 </head>
 <body class="admin-body">
     @php
