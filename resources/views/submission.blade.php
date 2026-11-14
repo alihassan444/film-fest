@@ -1,14 +1,17 @@
 @extends('layouts.frontend')
 
+@section('page_title', "Submit Your Work | IAC's 4th Film Festival 2026")
+@section('page_description', "Submit your work for IAC Film Fest-26, IAC's 4th Film Festival in 2026. Review registration fees, screening dates, and deadlines, then complete the official form.")
+
 @section('content')
 <section class="submission-page" aria-labelledby="submission-title">
     <div class="container">
         <div class="submission-hero">
             <div class="submission-intro">
-                <span class="submission-eyebrow">IAC Film Festival · 2026</span>
+                <span class="submission-eyebrow">IAC's 4th Film Festival · 2026</span>
                 <h1 id="submission-title">Just One<br><em>Step Away.</em></h1>
-                <p class="submission-lead">We're accepting submissions for short films, documentaries, music videos, and animated shorts. Complete the registration form to submit your work for Film Fest-26.</p>
-                <a class="btn submission-primary" href="https://forms.gle/6rJDdPbYW5a2U42aA" target="_blank" rel="noopener noreferrer">Fill Your Form <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> (opens Google Forms in a new tab)</span></a>
+                <p class="submission-lead">We're accepting submissions for short films, documentaries, music videos, and animated shorts. Complete the registration form to submit your work for IAC Film Fest-26, our 4th Film Festival.</p>
+                <a class="btn submission-primary" href="https://forms.gle/6rJDdPbYW5a2U42aA" target="_blank" rel="noopener noreferrer">Fill Form Now <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> (opens Google Forms in a new tab)</span></a>
                 <div class="submission-screening"><i class="bi bi-calendar3" aria-hidden="true"></i><div><span>Screening dates</span><strong>9–11 December 2026</strong><small>IAC Amphitheatre · Lahore</small></div></div>
             </div>
             <div class="submission-art" role="img" aria-label="Golden IAC Film Festival logo"></div>
@@ -39,7 +42,7 @@
         </div>
         <div class="submission-register">
             <div><span class="submission-eyebrow"><i class="bi bi-trophy" aria-hidden="true"></i> Cash prizes await</span><h2>Ready to Submit Your Work?</h2><p>Your next step is simple. Fill out the official registration form to submit your short film, documentary, music video, or animated short.</p></div>
-            <a class="btn submission-primary" href="https://forms.gle/6rJDdPbYW5a2U42aA" target="_blank" rel="noopener noreferrer">Fill Your Form <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> (opens Google Forms in a new tab)</span></a>
+            <a class="btn submission-primary" href="https://forms.gle/6rJDdPbYW5a2U42aA" target="_blank" rel="noopener noreferrer">Fill Form Now <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> (opens Google Forms in a new tab)</span></a>
         </div>
     </div>
 </section>

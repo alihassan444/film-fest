@@ -54,7 +54,7 @@
                 <div class="booking-bank">
                     <div class="booking-bank-header"><span><i class="bi bi-bank" aria-hidden="true"></i> Bank transfer</span><strong>SadaPay</strong></div>
                     <dl><div><dt>Account holder</dt><dd>Faisal Nadeem</dd></div><div><dt>Account number</dt><dd class="booking-account-number">03319957331</dd></div></dl>
-                    <a href="{{ route('index') }}#section_5">View ticket prices <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <a href="{{ route('index') }}#pricing">View ticket prices <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                 </div>
                 <label class="booking-receipt-label" for="ticket-form-account-screenshot">Payment receipt <span aria-hidden="true">*</span></label>
                 <small id="receipt-upload-help" class="booking-upload-help">JPEG or PNG / Maximum 5 MB</small>

@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
+    <meta name="description" content="@yield('page_description', '')">
     <meta name="author" content="">
 
-    <title>Film Fest-26 | IAC Film & TV Society</title>
+    <title>@yield('page_title', new \Illuminate\Support\HtmlString('Film Fest-26 | IAC Film & TV Society'))</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,19 +57,19 @@ https://templatemo.com/tm-583-festava-live
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-3">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="{{ route('index') }}#section_1">Home</a>
+                            <a class="nav-link click-scroll" href="{{ route('index') }}#home">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="{{ route('index') }}#section_2">About</a>
+                            <a class="nav-link click-scroll" href="{{ route('index') }}#about">About</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="{{ route('index') }}#section_3">Leaders</a>
+                            <a class="nav-link click-scroll" href="{{ route('index') }}#leaders">Leaders</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="{{ route('index') }}#section_4">Schedule</a>
+                            <a class="nav-link click-scroll" href="{{ route('index') }}#schedule">Schedule</a>
                         </li>
 
                         <li class="nav-item">
@@ -77,11 +77,11 @@ https://templatemo.com/tm-583-festava-live
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="{{ route('index') }}#section_5">Pricing</a>
+                            <a class="nav-link click-scroll" href="{{ route('index') }}#pricing">Pricing</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="{{ route('index') }}#section_6"> Venue</a>
+                            <a class="nav-link click-scroll" href="{{ route('index') }}#venue"> Venue</a>
                         </li>
 
                     </ul>
