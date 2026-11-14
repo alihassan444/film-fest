@@ -16,8 +16,8 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <link href="{{ asset('frontend/css/motion.css') }}" rel="stylesheet">
-    <script src="{{ asset('frontend/js/motion.js') }}" defer></script>
+    <link href="{{ asset('frontend/css/motion.css') }}?v={{ filemtime(public_path('frontend/css/motion.css')) }}" rel="stylesheet">
+    <script src="{{ asset('frontend/js/motion.js') }}?v={{ filemtime(public_path('frontend/js/motion.js')) }}" defer></script>
 </head>
 <body>
     <div id="app">

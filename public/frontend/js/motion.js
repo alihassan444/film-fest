@@ -1,5 +1,6 @@
 (() => {
     'use strict';
+    const initialize = () => {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
     const active = new Set();
     const seen = new WeakSet();
@@ -40,9 +41,11 @@
         }, { threshold: .08 });
         targets.forEach(element => observer.observe(element));
     }
-    preference.addEventListener('change', () => {
+    const onPreferenceChange = () => {
         if (preference.matches) active.forEach(animation => animation.cancel());
-    });
+    };
+    if (preference.addEventListener) preference.addEventListener('change', onPreferenceChange);
+    else if (preference.addListener) preference.addListener(onPreferenceChange);
     const navbar = document.querySelector('main > .navbar, .sticky-wrapper .navbar');
     if (navbar) {
         let scheduled = false;
@@ -52,4 +55,8 @@
         }, { passive: true });
         update();
     }
+    };
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initialize, { once: true });
+    } else initialize();
 })();

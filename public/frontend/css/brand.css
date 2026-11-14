@@ -244,7 +244,7 @@
 .submission-screening span { font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: #79664c; }
 .submission-screening strong { font-size: 19px; margin: 4px 0; }
 .submission-screening small { color: #79664c; font-size: 12px; }
-.submission-art { position: relative; min-height: 530px; border-radius: 160px 160px 24px 24px; background: #b7a187 url('/frontend/images/submission-flyer.jpg') center 72% / 150% auto no-repeat; box-shadow: 0 24px 65px #57381d20; border: 1px solid #b39a70; }
+.submission-art { position: relative; min-height: 530px; border-radius: 160px 160px 24px 24px; background: #b7a187 url('../images/submission-flyer.jpg') center 72% / 150% auto no-repeat; box-shadow: 0 24px 65px #57381d20; border: 1px solid #b39a70; }
 .submission-art-label { position: absolute; bottom: 20px; left: 20px; right: 20px; padding: 12px; border-radius: 20px; background: #f3e7d2eb; text-align: center; font-family: Georgia, serif; font-style: italic; font-size: 17px; color: #57381d; }
 .submission-art-mark { position: absolute; top: 24px; right: 25px; width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid #f3e7d2; border-radius: 50%; background: #57381d; color: #f3e7d2; font-family: Georgia, serif; font-size: 27px; }
 .submission-categories { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px; border-top: 1px solid #cdbb9c; border-bottom: 1px solid #cdbb9c; margin: 55px 0 65px; padding: 26px 0; }
