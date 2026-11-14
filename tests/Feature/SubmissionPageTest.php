@@ -11,8 +11,10 @@ class SubmissionPageTest extends TestCase
         $this->get('/submission')->assertOk()
             ->assertSee('https://forms.gle/6rJDdPbYW5a2U42aA')
             ->assertSee('9–11 December 2026')
-            ->assertSee('15 November 2026')
-            ->assertSee('30 November 2026')
+            ->assertSee('25 November 2026')
+            ->assertSee('5 December 2026')
+            ->assertDontSee('15 November 2026')
+            ->assertDontSee('30 November 2026')
             ->assertSee('1,000')->assertSee('1,500')
             ->assertSee('aria-current="page"', false);
     }
