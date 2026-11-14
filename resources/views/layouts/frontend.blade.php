@@ -3,6 +3,7 @@
 
 <head>
     @include('partials.favicon')
+    <link href="{{ asset('frontend/css/developer-credit.css') }}?v={{ filemtime(public_path('frontend/css/developer-credit.css')) }}" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -220,6 +221,9 @@ https://templatemo.com/tm-583-festava-live
         </div> --}}
 
        
+        <div class="text-center py-3" style="color: #D3CDC2; border-top: 1px solid rgba(206, 172, 115, .2);">
+            @include('partials.developer-credit')
+        </div>
     </footer>
 
     <!--

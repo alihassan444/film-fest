@@ -1,0 +1,6 @@
+.developer-credit { color: #79664c; font-size: 12px; line-height: 1.6; }
+.developer-credit a { color: #57381d; font-weight: 600; text-decoration: none; }
+.developer-credit a:hover { color: #57381d; text-decoration: underline; text-underline-offset: 3px; }
+.developer-credit a:focus-visible { outline: 2px solid #997548; outline-offset: 3px; }
+.site-footer .developer-credit { color: #c3b08e; }
+.site-footer .developer-credit a, .site-footer .developer-credit a:hover { color: #f0ddb3; }

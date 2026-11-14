@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @include('partials.favicon')
+    <link href="{{ asset('frontend/css/developer-credit.css') }}?v={{ filemtime(public_path('frontend/css/developer-credit.css')) }}" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -78,6 +79,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <footer class="text-center py-3">
+            @include('partials.developer-credit')
+        </footer>
     </div>
 </body>
 </html>
