@@ -24,7 +24,7 @@
 
     <link href="{{asset('frontend/css/templatemo-festava-live.css')}}" rel="stylesheet">
     <link href="{{ asset('frontend/css/brand.css') }}?v={{ filemtime(public_path('frontend/css/brand.css')) }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/motion.css') }}?v={{ filemtime(public_path('frontend/css/motion.css')) }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/motion.css') }}?v={{ md5_file(public_path('frontend/css/motion.css')) }}" rel="stylesheet">
     <script src="{{ asset('frontend/js/motion.js') }}?v={{ filemtime(public_path('frontend/js/motion.js')) }}" defer></script>
 
     <!--

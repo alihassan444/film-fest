@@ -240,10 +240,12 @@
                             <p class="schedule-description">Discover stories through four different forms of filmmaking.</p>
                             <ul class="schedule-genres" aria-label="Screening categories"><li>Short Film</li><li>Documentary</li><li>Music Video</li><li>Animated Short</li></ul>
                         </div>
+                        <div class="schedule-card-action">
+                            <a class="btn schedule-book-btn" href="{{ route('submission') }}">Submission <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                        </div>
                         <div class="schedule-card-bottom"><i class="bi bi-geo-alt" aria-hidden="true"></i> IAC Amphitheatre</div>
                     </article>
                     <div class="schedule-closing schedule-submission" id="submission" aria-label="Film submissions">
-                        <a class="btn schedule-book-btn" href="{{ route('submission') }}">Submission <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                         <p><i class="bi bi-stars" aria-hidden="true"></i> Share your vision. Submit your film or video for festival consideration.</p>
                     </div>
                 </div>
@@ -260,11 +262,11 @@
                             <p class="schedule-description">Come together for an evening of music to close the festival.</p>
                             <div class="schedule-time"><i class="bi bi-clock" aria-hidden="true"></i><span>Timing to be announced</span></div>
                         </div>
+                        <div class="schedule-card-action">
+                            <a class="btn schedule-book-btn" href="{{ route('form') }}">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                        </div>
                         <div class="schedule-card-bottom"><i class="bi bi-geo-alt" aria-hidden="true"></i> IAC Amphitheatre</div>
                     </article>
-                    <div class="schedule-closing schedule-ticket">
-                        <a class="btn schedule-book-btn" href="{{ route('form') }}">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
