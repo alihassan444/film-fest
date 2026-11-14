@@ -71,6 +71,10 @@ https://templatemo.com/tm-583-festava-live
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('submission') ? 'active' : '' }}" href="{{ route('submission') }}" @if(request()->routeIs('submission')) aria-current="page" @endif>Submission</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link click-scroll" href="{{ route('index') }}#section_5">Pricing</a>
                         </li>
 
@@ -100,7 +104,7 @@ https://templatemo.com/tm-583-festava-live
                         
                         <div class="footer-logos d-flex flex-row align-items-center justify-content-center justify-content-lg-start gap-3 gap-md-4 mt-4">
                             <img src="{{asset('frontend/images/leaders/uni-logo.png')}}" alt="University Logo" class="footer-logo img-fluid" style="max-height: 80px;">
-                            <img src="{{asset('frontend/images/leaders/society-logo.png')}}" alt="Society Logo" class="footer-logo img-fluid" style="max-height: 80px;">
+                            <img src="{{asset('frontend/images/leaders/ftv-society-logo.png')}}" alt="FTV Society — Film & TV Society, IAC" class="footer-logo img-fluid" style="max-height: 80px; max-width: 160px; width: auto; height: auto;" loading="lazy">
                             <span class="festival-logo festival-logo-footer"><img src="{{ asset('frontend/images/filmfestlogo.png') }}" alt="IAC Film Festival logo" loading="lazy"></span>
                         </div>
                     </div>

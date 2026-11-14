@@ -11,6 +11,7 @@ Auth::routes();
 
 // Frontend routes
 Route::get('/', [FrontendController::class, 'index'])->name('index');
+Route::view('/submission', 'submission')->name('submission');
 Route::get('/form', [FrontendController::class, 'form'])->name('form');
 Route::post('/ticket', [FrontendController::class, 'store'])->name('tickets.store');
 Route::get('/attendance', [WelcomeController::class, 'index'])->name('attendance.index');
