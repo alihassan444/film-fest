@@ -1,4 +1,4 @@
-<section class="footer-venue" id="section_6" aria-labelledby="venue-title">
+<section class="footer-venue" id="venue" aria-labelledby="venue-title">
     <div class="container">
         <div class="footer-venue-panel">
             <div class="footer-venue-details">

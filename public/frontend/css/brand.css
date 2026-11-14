@@ -302,7 +302,7 @@
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-#section_3 .artists-thumb {
+#leaders .artists-thumb {
     display: flex;
     flex-direction: column;
     background: linear-gradient(145deg, #432813, #140C08);
@@ -313,14 +313,14 @@
     box-shadow: 0 12px 28px rgba(42, 24, 13, .12);
     transition: box-shadow .35s ease, border-color .35s ease;
 }
-#section_3 .artists-image-wrap {
+#leaders .artists-image-wrap {
     height: auto;
     min-height: 0;
     aspect-ratio: 4 / 4.8;
     border-radius: 17px;
     flex-shrink: 0;
 }
-#section_3 .artists-image-wrap::after {
+#leaders .artists-image-wrap::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -329,7 +329,7 @@
     background: linear-gradient(180deg, transparent 75%, rgba(20, 12, 8, .22));
     pointer-events: none;
 }
-#section_3 .artists-image {
+#leaders .artists-image {
     border-radius: 0;
     object-position: center top;
 }
@@ -367,8 +367,8 @@
     overflow-wrap: anywhere;
 }
 @media (hover: hover) and (pointer: fine) {
-    #section_3 .artists-thumb:hover { border-color: #EED29D; box-shadow: 0 16px 38px rgba(67, 40, 19, .2); }
-    #section_3 .artists-thumb:hover .leadership-details::after { width: 64px; }
+    #leaders .artists-thumb:hover { border-color: #EED29D; box-shadow: 0 16px 38px rgba(67, 40, 19, .2); }
+    #leaders .artists-thumb:hover .leadership-details::after { width: 64px; }
 }
 :root {
     --festival-cream: #F8F3E1;

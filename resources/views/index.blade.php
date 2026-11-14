@@ -1,5 +1,8 @@
 @extends('layouts.frontend')
 
+@section('page_title', "IAC Film Fest-26 | IAC's 4th Film Festival 2026")
+@section('page_description', "Discover IAC's 4th Film Festival in 2026, celebrating filmmakers, creative storytelling, and the art of cinema.")
+
 @section('content')
     @if (session('submitted_ticket_id'))
         <section class="order-confirmation" id="ticket-confirmation" aria-labelledby="confirmation-title">
@@ -26,7 +29,7 @@
     @elseif (session('success'))
         <div class="container order-success-fallback"><div class="alert alert-success" role="status">{{ session('success') }}</div></div>
     @endif
-    <section class="hero-section" id="section_1">
+    <section class="hero-section" id="home">
         <div class="section-overlay"></div>
 
         <div class="container d-flex justify-content-center align-items-center">
@@ -34,11 +37,11 @@
 
                 <div class="col-12 mt-auto mb-4 mb-md-5 text-center hero-content">
                     <span class="festival-logo festival-logo-hero"><img src="{{ asset('frontend/images/filmfestlogo.png') }}" alt="IAC Film Festival logo"></span>
-                    <small class="d-block mb-2 mb-md-3">Organized By</small>
+                    <small class="d-block mb-2 mb-md-3">IAC'S 4TH FILM FESTIVAL · 2026</small>
 
                     <h1 class="text-white mb-3 mb-md-5 hero-title">Film & TV Society</h1>
 
-                    <a class="btn custom-btn hero-begin-btn smoothscroll mb-4 mb-md-0" href="#section_2">Let's begin</a>
+                    <a class="btn custom-btn hero-begin-btn smoothscroll mb-4 mb-md-0" href="#about">Let's begin</a>
                 </div>
 
                 <div class="col-lg-12 col-12 mt-auto mt-md-4 d-flex flex-column flex-lg-row text-center hero-bottom-info">
@@ -95,7 +98,7 @@
     </section>
 
    
-    <section class="about-section society-story section-padding" id="section_2" aria-labelledby="society-title">
+    <section class="about-section society-story section-padding" id="about" aria-labelledby="society-title">
         <div class="container">
             <div class="society-story-grid">
                 <div class="society-copy services-info">
@@ -103,8 +106,8 @@
                     <h2 id="society-title">A community.<br>A camera.<br><em>Endless possibilities.</em></h2>
                     <p class="society-lead">Film &amp; TV Society at the Institute for Art and Culture.</p>
                     <p class="society-description">In collaboration with the Department of Film &amp; TV, we bring together students who share a passion for cinema, television, and digital media. Through screenings, workshops, and creative projects, we connect classroom learning with real-world practice.</p>
-                    <p class="society-description">We believe stories can inspire and connect. Here, students experiment, collaborate, and find their voice as the next generation of filmmakers and media creators.</p>
-                    <a class="society-team-link" href="#section_3">Meet the people behind it <i class="bi bi-arrow-down-right" aria-hidden="true"></i></a>
+                    <p class="society-description">IAC Film Fest-26, our 4th Film Festival, celebrates stories that inspire and connect. Here, students experiment, collaborate, and find their voice as the next generation of filmmakers and media creators.</p>
+                    <a class="society-team-link" href="#leaders">Meet the people behind it <i class="bi bi-arrow-down-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="society-visual about-text-wrap">
                     <figure class="society-photo">
@@ -124,7 +127,7 @@
     </section>
 
 
-    <section class="artists-section section-padding" id="section_3">
+    <section class="artists-section section-padding" id="leaders">
         <div class="container">
             <div class="row justify-content-center">
 
@@ -220,11 +223,11 @@
     </section>
 
 
-    <section class="schedule-section festival-schedule section-padding" id="section_4" aria-labelledby="schedule-title">
+    <section class="schedule-section festival-schedule section-padding" id="schedule" aria-labelledby="schedule-title">
         <div class="container">
             <div class="schedule-heading">
                 <div><span class="schedule-eyebrow">The festival programme</span><h2 id="schedule-title">Three days.<br>Stories that stay.</h2></div>
-                <p>From the big screen to a night of music.<br>Explore what's on at Film Fest-26.</p>
+                <p>Join us for IAC's 4th Film Festival.<br>Three days of cinema and live music.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-12">
@@ -273,7 +276,7 @@
     </section>
 
 
-    <section class="pricing-section section-padding festival-pricing" id="section_5" aria-labelledby="pricing-title">
+    <section class="pricing-section section-padding festival-pricing" id="pricing" aria-labelledby="pricing-title">
         <div class="container">
             <div class="pricing-heading text-center">
                 <span class="pricing-eyebrow">Your seat at the festival</span>
