@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @include('partials.favicon')
+    <link href="{{ asset('frontend/css/developer-credit.css') }}?v={{ filemtime(public_path('frontend/css/developer-credit.css')) }}" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -106,7 +107,7 @@
 
             <footer class="admin-footer">
                 <span>Film Fest • Administration</span>
-                <span>Your festival. Beautifully organised.</span>
+                <span>@include('partials.developer-credit')</span>
             </footer>
         </main>
     </div>
