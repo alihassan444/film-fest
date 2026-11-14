@@ -85,8 +85,9 @@
         </div>
 
         <div class="video-wrap">
-            <video autoplay="" loop="" muted="" class="custom-video" poster="">
-                <source src="frontend/video/festival.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline preload="auto" class="custom-video" poster="{{ asset('frontend/images/festival-poster.jpg') }}">
+                <source src="{{ asset('frontend/video/festival-mobile.mp4') }}" media="(max-width: 767px)" type="video/mp4">
+                <source src="{{ asset('frontend/video/festival-web.mp4') }}" type="video/mp4">
 
                 Your browser does not support the video tag.
             </video>

@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'show_navbar_buy_ticket' => env('SHOW_NAVBAR_BUY_TICKET', false),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
