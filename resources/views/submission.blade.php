@@ -31,13 +31,13 @@
                 <div class="submission-fee-top"><span>01 / Early Bird</span><i class="bi bi-lightning-charge" aria-hidden="true"></i></div>
                 <p class="submission-amount"><small>Rs.</small> 1,000</p>
                 <h3>A head start for your next story.</h3>
-                <p class="submission-deadline"><i class="bi bi-calendar-check" aria-hidden="true"></i> Valid through <strong>15 November 2026</strong></p>
+                <p class="submission-deadline"><i class="bi bi-calendar-check" aria-hidden="true"></i> Valid through <strong>25 November 2026</strong></p>
             </article>
             <article class="submission-fee">
                 <div class="submission-fee-top"><span>02 / Regular Registration</span><i class="bi bi-camera-reels" aria-hidden="true"></i></div>
                 <p class="submission-amount"><small>Rs.</small> 1,500</p>
                 <h3>Your place in the festival starts here.</h3>
-                <p class="submission-deadline"><i class="bi bi-calendar-check" aria-hidden="true"></i> Deadline: <strong>30 November 2026</strong></p>
+                <p class="submission-deadline"><i class="bi bi-calendar-check" aria-hidden="true"></i> Deadline: <strong>5 December 2026</strong></p>
             </article>
         </div>
         <div class="submission-register">
