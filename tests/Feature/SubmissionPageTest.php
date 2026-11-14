@@ -22,6 +22,9 @@ class SubmissionPageTest extends TestCase
         $this->get('/')->assertOk()
             ->assertSee(route('submission'))
             ->assertSee('9–11 December 2026')
+            ->assertSee('festival-mobile.mp4')
+            ->assertSee('festival-web.mp4')
+            ->assertSee('festival-poster.jpg')
             ->assertDontSee('Submission link coming soon');
     }
 }

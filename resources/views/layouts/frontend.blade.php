@@ -45,7 +45,9 @@ https://templatemo.com/tm-583-festava-live
                    <span>Film Fest-26</span>
                 </a>
 
-                <a href="{{route('form')}}" class="btn custom-btn navbar-ticket-btn d-lg-none ms-auto">Buy Ticket</a>
+                @if(config('app.show_navbar_buy_ticket'))
+                    <a href="{{route('form')}}" class="btn custom-btn navbar-ticket-btn d-lg-none ms-auto">Buy Ticket</a>
+                @endif
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +86,9 @@ https://templatemo.com/tm-583-festava-live
 
                     </ul>
 
-                    <a href="{{route('form')}}" class="btn custom-btn navbar-ticket-btn d-lg-block d-none">Buy Ticket</a>
+                    @if(config('app.show_navbar_buy_ticket'))
+                        <a href="{{route('form')}}" class="btn custom-btn navbar-ticket-btn d-lg-block d-none">Buy Ticket</a>
+                    @endif
                 </div>
             </div>
         </nav>

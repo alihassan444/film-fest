@@ -244,9 +244,7 @@
 .submission-screening span { font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: #79664c; }
 .submission-screening strong { font-size: 19px; margin: 4px 0; }
 .submission-screening small { color: #79664c; font-size: 12px; }
-.submission-art { position: relative; min-height: 530px; border-radius: 160px 160px 24px 24px; background: #b7a187 url('../images/submission-flyer.jpg') center 72% / 150% auto no-repeat; box-shadow: 0 24px 65px #57381d20; border: 1px solid #b39a70; }
-.submission-art-label { position: absolute; bottom: 20px; left: 20px; right: 20px; padding: 12px; border-radius: 20px; background: #f3e7d2eb; text-align: center; font-family: Georgia, serif; font-style: italic; font-size: 17px; color: #57381d; }
-.submission-art-mark { position: absolute; top: 24px; right: 25px; width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid #f3e7d2; border-radius: 50%; background: #57381d; color: #f3e7d2; font-family: Georgia, serif; font-size: 27px; }
+.submission-art { position: relative; aspect-ratio: 1 / 1.05; background: url('../images/filmfestlogo.png') center / 230% auto no-repeat; }
 .submission-categories { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px; border-top: 1px solid #cdbb9c; border-bottom: 1px solid #cdbb9c; margin: 55px 0 65px; padding: 26px 0; }
 .submission-categories span { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; }
 .submission-categories i { color: #8b6533; font-size: 20px; }
@@ -268,7 +266,7 @@
 @media (max-width: 767px) {
     .submission-page { padding-top: 105px; }
     .submission-hero, .submission-fees { grid-template-columns: 1fr; gap: 28px; }
-    .submission-art { min-height: 460px; max-width: 520px; width: 100%; justify-self: center; }
+    .submission-art { max-width: 520px; width: 100%; justify-self: center; }
     .submission-fees-heading, .submission-register { flex-direction: column; align-items: flex-start; }
     .submission-categories { justify-content: flex-start; column-gap: 28px; margin: 35px 0 45px; }
     .submission-fee { padding: 26px; }
@@ -377,6 +375,27 @@
     --festival-highlight: #EED29D;
 }
 body { background-color: var(--festival-cream); }
+.hero-section {
+    isolation: isolate;
+    background: #432813 url('../images/festival-poster.jpg') center / cover no-repeat;
+}
+.hero-section .video-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+.hero-section .custom-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.hero-section .section-overlay {
+    background: linear-gradient(180deg, rgba(42, 24, 13, .32), rgba(42, 24, 13, .18) 45%, rgba(42, 24, 13, .55));
+    opacity: 1;
+}
 .navbar.festival-nav {
     position: fixed;
     top: 12px;
