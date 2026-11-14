@@ -170,11 +170,11 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/shah-sab.jpg') }}"
+                                    <img src="{{ asset('frontend/images/leaders/president.png') }}"
                                         class="artists-image img-fluid" alt="President">
                                 </div>
 
-                                <div class="leadership-details"><p class="leadership-role">President</p><h3 class="leadership-name">Syed Jaffar Shah</h3></div>
+                                <div class="leadership-details"><p class="leadership-role">President</p><h3 class="leadership-name">Haziq Ammar</h3></div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -190,11 +190,11 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/haziq.jpg') }}"
+                                    <img src="{{ asset('frontend/images/leaders/mareeha-saqi.jpeg') }}"
                                         class="artists-image img-fluid" alt="Vice President">
                                 </div>
 
-                                <div class="leadership-details"><p class="leadership-role">Vice President</p><h3 class="leadership-name">Haziq Ammar</h3></div>
+                                <div class="leadership-details"><p class="leadership-role">Vice President</p><h3 class="leadership-name">Mareeha Saqi</h3></div>
                             </div>
                         </div>
                     </div>
