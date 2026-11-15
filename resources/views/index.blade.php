@@ -140,8 +140,8 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-md-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/sir-sikandar.png') }}"
-                                        class="artists-image img-fluid" alt="Head of Department">
+                                    <img src="{{ asset('frontend/images/leaders/sikandar-javed-hod.jpeg') }}"
+                                        class="artists-image img-fluid" alt="Mr. Sikandar Javed, Head of Department">
                                 </div>
 
                                 <div class="leadership-details"><p class="leadership-role">Head of Department</p><h3 class="leadership-name">Mr. Sikandar Javed</h3></div>
@@ -150,11 +150,11 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/sir-ali.jpg') }}"
-                                        class="artists-image img-fluid" alt="Festival Director">
+                                    <img src="{{ asset('frontend/images/leaders/ali-sultan-director.jpeg') }}"
+                                        class="artists-image img-fluid" alt="Syed Ali Sultan, Festival Director">
                                 </div>
 
-                                <div class="leadership-details"><p class="leadership-role">Festival Director</p><h3 class="leadership-name">Mr. Ali Sultan</h3></div>
+                                <div class="leadership-details"><p class="leadership-role">Festival Director</p><h3 class="leadership-name">Syed Ali Sultan</h3></div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -170,8 +170,8 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/president.png') }}"
-                                        class="artists-image img-fluid" alt="President">
+                                    <img src="{{ asset('frontend/images/leaders/haziq-ammar.jpg') }}"
+                                        class="artists-image img-fluid leadership-president-image" alt="Haziq Ammar, President">
                                 </div>
 
                                 <div class="leadership-details"><p class="leadership-role">President</p><h3 class="leadership-name">Haziq Ammar</h3></div>
@@ -192,8 +192,8 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/mareeha-saqi.jpeg') }}"
-                                        class="artists-image img-fluid" alt="Vice President">
+                                    <img src="{{ asset('frontend/images/leaders/mareeha-saqi-new.jpg') }}"
+                                        class="artists-image img-fluid leadership-vice-president-image" alt="Mareeha Saqi, Vice President">
                                 </div>
 
                                 <div class="leadership-details"><p class="leadership-role">Vice President</p><h3 class="leadership-name">Mareeha Saqi</h3></div>
@@ -209,7 +209,7 @@
                                 class="artists-image img-fluid">
                         </div>
 
-                        <div class="leadership-details"><p class="leadership-role">Festival Director</p><h3 class="leadership-name">Mr. Ali Sultan</h3></div>
+                        <div class="leadership-details"><p class="leadership-role">Festival Director</p><h3 class="leadership-name">Syed Ali Sultan</h3></div>
                     </div>
 
                     <div class="artists-thumb">

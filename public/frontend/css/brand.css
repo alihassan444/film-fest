@@ -363,6 +363,16 @@
     padding: 24px 18px 30px;
     flex: 1;
 }
+#leaders .leadership-president-image { object-position: center 80%; }
+#leaders .leadership-vice-president-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+    object-position: center;
+}
 .leadership-details::after {
     content: '';
     position: absolute;
