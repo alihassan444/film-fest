@@ -40,6 +40,7 @@
                 <p class="submission-deadline"><i class="bi bi-calendar-check" aria-hidden="true"></i> Deadline: <strong>5 December 2026, 11:59 PM</strong></p>
             </article>
         </div>
+        @include('partials.social-night-section')
         <section class="submission-rules" aria-labelledby="submission-rules-title">
             <div class="submission-fees-heading">
                 <div><span class="submission-eyebrow">Before you submit</span><h2 id="submission-rules-title">Film submission guidelines</h2></div>
@@ -58,7 +59,7 @@
             </dl>
         </section>
         <div class="submission-register">
-            <div><span class="submission-eyebrow"><i class="bi bi-trophy" aria-hidden="true"></i> Cash prizes await</span><h2>Ready to Submit Your Work?</h2><p>Your next step is simple. Fill out the official registration form to submit your short film, documentary, music video, or animated short.</p></div>
+            <div><span class="submission-eyebrow"><i class="bi bi-trophy" aria-hidden="true"></i> Cash prizes await</span><h2>Ready to Submit Your Work?</h2><p>Your next step is simple. Fill out the official registration form to submit your short film, documentary, music video, or animated short.</p><p class="submission-entry-notice"><i class="bi bi-info-circle" aria-hidden="true"></i><strong>One member from each participating team is eligible for complimentary entry to Social Night.</strong></p></div>
             <a class="btn submission-primary" href="https://forms.gle/6rJDdPbYW5a2U42aA" target="_blank" rel="noopener noreferrer">Fill Form Now <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> (opens Google Forms in a new tab)</span></a>
         </div>
     </div>

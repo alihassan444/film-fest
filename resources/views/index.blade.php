@@ -170,7 +170,7 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/haziq-ammar.jpg') }}"
+                                    <img src="{{ asset('frontend/images/leaders/haziq-ammar-president.jpeg') }}"
                                         class="artists-image img-fluid leadership-president-image" alt="Haziq Ammar, President">
                                 </div>
 
@@ -192,7 +192,7 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/mareeha-saqi-new.jpg') }}"
+                                    <img src="{{ asset('frontend/images/leaders/mareeha-saqi-portrait.jpeg') }}"
                                         class="artists-image img-fluid leadership-vice-president-image" alt="Mareeha Saqi, Vice President">
                                 </div>
 
@@ -283,47 +283,33 @@
             <div class="pricing-heading text-center">
                 <span class="pricing-eyebrow">Your seat at the festival</span>
                 <h2 id="pricing-title">Ticket Pricing</h2>
-                <p>One festival. Three booking windows. Plan ahead for the best price.</p>
+                <p>Tickets are Rs 1,500 in advance or Rs 2,000 at the ticket window.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <article class="festival-price-card price-card-featured">
-                        <div class="price-card-top"><span class="price-card-number">01 /</span><span class="price-card-badge">Lowest price</span></div>
-                        <h3>Early Bird</h3>
-                        {{-- Pricing dates temporarily hidden: <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> Through 12 November</p> --}}
-                        <div class="price-card-amount"><span>Rs</span> 1,000</div>
-                        <p class="price-card-unit">per ticket</p>
-                        <div class="price-card-divider" aria-hidden="true"></div>
-                        <p class="price-card-description">Book in the first window for the festival's lowest ticket price.</p>
-                        <a href="{{ route('form') }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Early Bird</span></a>
-                    </article>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-5 col-md-6 col-12">
                     <article class="festival-price-card">
-                        <div class="price-card-top"><span class="price-card-number">02 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
-                        <h3>Standard</h3>
-                        {{-- Pricing dates temporarily hidden: <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> 13–21 November</p> --}}
+                        <div class="price-card-top"><span class="price-card-number">01 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
+                        <h3>Advance Ticket</h3>
                         <div class="price-card-amount"><span>Rs</span> 1,500</div>
                         <p class="price-card-unit">per ticket</p>
                         <div class="price-card-divider" aria-hidden="true"></div>
-                        <p class="price-card-description">The next booking window, with the same festival experience.</p>
-                        <a href="{{ route('form') }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Standard</span></a>
+                        <p class="price-card-description">Book your festival ticket in advance.</p>
+                        <a href="{{ route('form') }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Advance Ticket</span></a>
                     </article>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-5 col-md-6 col-12">
                     <article class="festival-price-card">
-                        <div class="price-card-top"><span class="price-card-number">03 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
-                        <h3>Final Window</h3>
-                        {{-- Pricing dates temporarily hidden: <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> From 22 November</p> --}}
+                        <div class="price-card-top"><span class="price-card-number">02 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
+                        <h3>Ticket Window</h3>
                         <div class="price-card-amount"><span>Rs</span> 2,000</div>
                         <p class="price-card-unit">per ticket</p>
                         <div class="price-card-divider" aria-hidden="true"></div>
-                        <p class="price-card-description">The final booking window for the festival.</p>
-                        <a href="{{ route('form') }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Final Window</span></a>
+                        <p class="price-card-description">Buy your ticket at the festival ticket counter.</p>
+                        <a href="{{ route('form') }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Ticket Window</span></a>
                     </article>
                 </div>
             </div>
-            <p class="pricing-footnote"><i class="bi bi-shield-check" aria-hidden="true"></i> Submit your payment receipt when booking. Tickets are confirmed after verification.</p>
+            <p class="pricing-footnote"><i class="bi bi-shield-check" aria-hidden="true"></i> Choose bank transfer or cash when booking. Tickets are confirmed after payment verification.</p>
         </div>
     </section>
 @endsection
