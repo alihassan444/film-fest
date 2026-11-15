@@ -18,6 +18,10 @@
             <section class="admin-card">
                 <div class="admin-card-header"><div class="d-flex align-items-center gap-3"><span class="admin-icon-tile"><i class="bi bi-person" aria-hidden="true"></i></span><div><h2 class="admin-card-title">Attendee information</h2><p class="admin-card-copy">Details provided at the time of booking.</p></div></div></div>
                 <dl class="attendee-details">
+                    <div><dt>Payment method</dt><dd>{{ $ticket->payment_method === 'cash' ? 'Cash at ticket counter' : 'Bank transfer' }}</dd></div>
+                    @if($ticket->payment_method === 'cash')
+                        <div><dt>Cash amount</dt><dd>PKR {{ number_format((float) $ticket->cash_amount, 2) }}</dd></div>
+                    @endif
                     @foreach (['Name' => $ticket->name, 'Email address' => $ticket->email, 'Phone number' => $ticket->phone, 'Student ID' => $ticket->student_id, 'Department' => $ticket->department, 'Semester' => $ticket->semester, 'CNIC' => $ticket->cnic] as $label => $value)
                         <div><dt>{{ $label }}</dt><dd>{{ $value ?: 'Not provided' }}</dd></div>
                     @endforeach

@@ -30,16 +30,19 @@ class FrontendController extends Controller
     
     public function store(Request $request)
     {
+        $request->merge(['payment_method' => $request->input('payment_method', 'bank')]);
         // Validate the request
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255', 'unique:tickets,email'],
-            'phone' => ['nullable', 'string', 'max:20'],
+            'phone' => ['required', 'string', 'max:20'],
             'student_id' => ['nullable', 'string', 'max:50'],
             'cnic' => ['nullable', 'string', 'max:20'],
             'department' => ['nullable', 'string', 'max:100'],
             'semester' => ['nullable', 'string', 'max:20'],
-            'transaction_screenshot' => ['required', 'image', 'mimes:jpeg,jpg,png', 'max:5120'], // 5MB max
+            'payment_method' => ['required', 'in:bank,cash'],
+            'cash_amount' => ['exclude_unless:payment_method,cash', 'required', 'numeric', 'min:0.01', 'max:99999999.99', 'decimal:0,2'],
+            'transaction_screenshot' => ['required_if:payment_method,bank', 'nullable', 'image', 'mimes:jpeg,jpg,png', 'max:5120'], // 5MB max
         ], [
             'email.unique' => 'This email address has already been used to purchase a ticket. Please use a different email address.',
             'email.required' => 'Email address is required.',
@@ -75,6 +78,8 @@ class FrontendController extends Controller
             'department' => $validated['department'] ?? null,
             'semester' => $validated['semester'] ?? null,
             'transaction_screenshot' => $screenshotPath,
+            'payment_method' => $validated['payment_method'],
+            'cash_amount' => $validated['cash_amount'] ?? null,
             'status' => 'pending',
         ]);
 

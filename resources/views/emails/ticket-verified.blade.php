@@ -12,6 +12,7 @@
         @endif
         <p>Your QR code is also attached to this email. Save it on your phone and present it at the entrance.</p>
         <p><strong>Venue:</strong> IAC Amphitheatre, Institute for Art and Culture, Lahore.</p>
+        <p><strong>Festival dates:</strong> 9-10-11 December 2026.</p>
         <p>Please keep your ticket and QR code private. We look forward to seeing you at the festival.</p>
         <p>Film &amp; TV Society<br>Institute for Art and Culture</p>
     </div>

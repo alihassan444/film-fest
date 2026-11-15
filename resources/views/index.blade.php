@@ -48,7 +48,7 @@
                     <div class="date-wrap mb-3 mb-lg-0">
                         <h5 class="text-white mb-0">
                             <i class="custom-icon bi-clock me-2"></i>
-                            9–11 December 2026
+                            9-10-11 December 2026
                         </h5>
                     </div>
 
@@ -136,7 +136,7 @@
                 </div>
 
                 <div class="col-lg-10 col-12">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-md-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
@@ -177,6 +177,7 @@
                                 <div class="leadership-details"><p class="leadership-role">President</p><h3 class="leadership-name">Haziq Ammar</h3></div>
                             </div>
                         </div>
+                        @if(false) {{-- Fest President card temporarily hidden. --}}
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
@@ -187,6 +188,7 @@
                                 <div class="leadership-details"><p class="leadership-role">Fest President</p><h3 class="leadership-name">Faisal Nadeem</h3></div>
                             </div>
                         </div>
+                        @endif
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
@@ -233,8 +235,8 @@
                 <div class="col-md-6 col-12">
                     <article class="schedule-day-card">
                         <header class="schedule-card-header">
-                            <span class="schedule-day-label">9–11 December 2026 <span>Cinema</span></span>
-                            <div class="schedule-date"><strong>9–11</strong><span>December</span></div>
+                            <span class="schedule-day-label">9-10-11 December 2026 <span>Cinema</span></span>
+                            <div class="schedule-date"><strong>9-10-11</strong><span>December</span></div>
                         </header>
                         <div class="schedule-card-content">
                             <span class="schedule-event-icon" aria-hidden="true"><i class="bi bi-film"></i></span>
@@ -288,7 +290,7 @@
                     <article class="festival-price-card price-card-featured">
                         <div class="price-card-top"><span class="price-card-number">01 /</span><span class="price-card-badge">Lowest price</span></div>
                         <h3>Early Bird</h3>
-                        <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> Through 12 November</p>
+                        {{-- Pricing dates temporarily hidden: <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> Through 12 November</p> --}}
                         <div class="price-card-amount"><span>Rs</span> 1,000</div>
                         <p class="price-card-unit">per ticket</p>
                         <div class="price-card-divider" aria-hidden="true"></div>
@@ -300,7 +302,7 @@
                     <article class="festival-price-card">
                         <div class="price-card-top"><span class="price-card-number">02 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
                         <h3>Standard</h3>
-                        <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> 13–21 November</p>
+                        {{-- Pricing dates temporarily hidden: <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> 13–21 November</p> --}}
                         <div class="price-card-amount"><span>Rs</span> 1,500</div>
                         <p class="price-card-unit">per ticket</p>
                         <div class="price-card-divider" aria-hidden="true"></div>
@@ -312,11 +314,11 @@
                     <article class="festival-price-card">
                         <div class="price-card-top"><span class="price-card-number">03 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
                         <h3>Final Window</h3>
-                        <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> From 22 November</p>
+                        {{-- Pricing dates temporarily hidden: <p class="price-card-window"><i class="bi bi-calendar3" aria-hidden="true"></i> From 22 November</p> --}}
                         <div class="price-card-amount"><span>Rs</span> 2,000</div>
                         <p class="price-card-unit">per ticket</p>
                         <div class="price-card-divider" aria-hidden="true"></div>
-                        <p class="price-card-description">Booking later? This is the ticket rate after 21 November.</p>
+                        <p class="price-card-description">The final booking window for the festival.</p>
                         <a href="{{ route('form') }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Final Window</span></a>
                     </article>
                 </div>
