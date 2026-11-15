@@ -170,7 +170,7 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/haziq-ammar-president.jpeg') }}"
+                                    <img src="{{ asset('frontend/images/leaders/haziq-ammar.jpg') }}"
                                         class="artists-image img-fluid leadership-president-image" alt="Haziq Ammar, President">
                                 </div>
 
