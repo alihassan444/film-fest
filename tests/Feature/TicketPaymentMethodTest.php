@@ -16,6 +16,8 @@ class TicketPaymentMethodTest extends TestCase
         $qr->shouldReceive('format')->once()->andReturnSelf();
         $qr->shouldReceive('size')->once()->andReturnSelf();
         $qr->shouldReceive('margin')->once()->andReturnSelf();
+        // PNG generation uses error correction when Imagick is installed.
+        $qr->shouldReceive('errorCorrection')->with('H')->zeroOrMoreTimes()->andReturnSelf();
         $qr->shouldReceive('generate')->once();
         QrCode::swap($qr);
 
