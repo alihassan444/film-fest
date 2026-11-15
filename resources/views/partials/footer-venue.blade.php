@@ -4,6 +4,7 @@
             <div class="footer-venue-details">
                 <span class="footer-venue-eyebrow"><i class="bi bi-geo-alt" aria-hidden="true"></i> Meet us at the festival</span>
                 <h2 id="venue-title">The setting for<br>great stories.</h2>
+                <p class="footer-venue-note"><i class="bi bi-calendar3" aria-hidden="true"></i> Festival dates: <strong>9-10-11 December 2026</strong></p>
                 <div class="footer-venue-address">
                     <span class="footer-venue-pin" aria-hidden="true"><i class="bi bi-geo-alt-fill"></i></span>
                     <div>

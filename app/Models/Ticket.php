@@ -20,6 +20,8 @@ class Ticket extends Model
         'department',
         'semester',
         'transaction_screenshot',
+        'payment_method',
+        'cash_amount',
         'ticket_id',
         'status',
         'verification_token',
@@ -30,6 +32,7 @@ class Ticket extends Model
     ];
 
     protected $casts = [
+        'cash_amount' => 'decimal:2',
         'verified_at' => 'datetime',
         'checked_in_at' => 'datetime',
     ];

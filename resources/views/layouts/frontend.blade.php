@@ -46,9 +46,7 @@ https://templatemo.com/tm-583-festava-live
                    <span>Film Fest-26</span>
                 </a>
 
-                @if(config('app.show_navbar_buy_ticket'))
-                    <a href="{{route('form')}}" class="btn custom-btn navbar-ticket-btn d-lg-none ms-auto">Buy Ticket</a>
-                @endif
+                <a href="{{ route('submission') }}" class="btn custom-btn navbar-ticket-btn d-lg-none ms-auto" @if(request()->routeIs('submission')) aria-current="page" @endif>Submission</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,10 +72,6 @@ https://templatemo.com/tm-583-festava-live
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('submission') ? 'active' : '' }}" href="{{ route('submission') }}" @if(request()->routeIs('submission')) aria-current="page" @endif>Submission</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link click-scroll" href="{{ route('index') }}#pricing">Pricing</a>
                         </li>
 
@@ -87,9 +81,7 @@ https://templatemo.com/tm-583-festava-live
 
                     </ul>
 
-                    @if(config('app.show_navbar_buy_ticket'))
-                        <a href="{{route('form')}}" class="btn custom-btn navbar-ticket-btn d-lg-block d-none">Buy Ticket</a>
-                    @endif
+                    <a href="{{ route('submission') }}" class="btn custom-btn navbar-ticket-btn d-lg-block d-none" @if(request()->routeIs('submission')) aria-current="page" @endif>Submission</a>
                 </div>
             </div>
         </nav>

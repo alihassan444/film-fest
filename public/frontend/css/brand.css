@@ -16,6 +16,24 @@
 .booking-required-note { color: #6E6A60; font-size: 10px; margin-bottom: 18px; }
 .booking-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
 .booking-field { min-width: 0; }
+.booking-payment-choice { margin: 0 0 26px; padding: 0; border: 0; min-width: 0; }
+.booking-payment-choice legend { float: none; width: auto; margin: 0 0 12px; color: #432813; font-size: 13px; font-weight: 700; }
+.payment-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.payment-option { position: relative; margin: 0; cursor: pointer; }
+.payment-option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.payment-option-content { display: flex; align-items: center; gap: 12px; height: 100%; padding: 18px 14px; border: 1px solid #B89866; border-radius: 14px; background: #FFFCF5; color: #432813; }
+.payment-option-content > i { font-size: 22px; flex-shrink: 0; }
+.payment-option-content > span:not(.payment-option-mark) { flex: 1; min-width: 0; }
+.payment-option-content strong, .payment-option-content small { display: block; }
+.payment-option-content strong { font-size: 13px; line-height: 1.4; }
+.payment-option-content small { margin-top: 5px; font-size: 11px; line-height: 1.5; color: #6B5035; }
+.payment-option-mark { width: 16px; height: 16px; flex: 0 0 16px; border: 1px solid #947344; border-radius: 50%; }
+.payment-option input:checked + .payment-option-content { background: #2A180D; border-color: #2A180D; color: #F8F3E1; }
+.payment-option input:checked + .payment-option-content small { color: #E0C99F; }
+.payment-option input:checked + .payment-option-content .payment-option-mark { border: 4px solid #EED29D; background: #2A180D; }
+.payment-option:hover .payment-option-content { border-color: #432813; }
+.payment-option input:focus-visible + .payment-option-content { outline: 3px solid #947344; outline-offset: 3px; }
+@media (max-width: 575px) { .payment-options { grid-template-columns: 1fr; } }
 .booking-field label, .booking-receipt-label { display: block; color: #432813; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
 .booking-field label small { color: #6E6A60; font-size: 9px; font-weight: 400; margin-left: 5px; }
 .ticket-booking .form-control { margin: 0; padding: 12px; min-height: 46px; font-size: 12px; border-radius: 10px; background-color: #fff; color: #2E2A21; }
@@ -114,7 +132,14 @@
 .footer-venue-details { padding: clamp(26px, 4vw, 48px); }
 .footer-venue-eyebrow { display: flex; align-items: center; gap: 8px; color: #CEAC73; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; margin-bottom: 20px; }
 .footer-venue-details h2 { color: #F8F3E1; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; margin-bottom: 28px; }
+.submission-rules { margin-top: 56px; }
+.submission-rules-list { margin: 0; }
+.submission-rules-list > div { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(0, 3fr); gap: 16px 32px; padding: 22px 0; border-bottom: 1px solid #D2C3A6; }
+.submission-rules-list dt { color: #2A180D; font-weight: 700; }
+.submission-rules-list dd { margin: 0; color: #59432F; line-height: 1.75; max-width: 72ch; }
+@media (max-width: 575px) { .submission-rules-list > div { grid-template-columns: 1fr; gap: 8px; } }
 .footer-venue-address { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 26px; }
+.footer-venue-note + .footer-venue-address { margin-top: 20px; }
 .footer-venue-pin { display: grid; place-items: center; width: 40px; height: 40px; flex: 0 0 40px; background: rgba(206, 172, 115, .1); border: 1px solid rgba(206, 172, 115, .25); border-radius: 12px; color: #EED29D; }
 .footer-venue-address h3 { font-size: 17px; color: #F0DDB3; margin: 0 0 8px; }
 .footer-venue-address p { font-size: 13px; line-height: 1.8; color: #D3CDC2; margin: 0; }
@@ -209,7 +234,7 @@
 .schedule-day-label { color: #EED29D; font-size: 12px; text-transform: uppercase; font-weight: 700; letter-spacing: .12em; }
 .schedule-day-label > span { display: block; color: #C3B08E; font-size: 10px; margin-top: 7px; font-weight: 400; }
 .schedule-date { display: flex; align-items: center; gap: 10px; color: #F8F3E1; }
-.schedule-date strong { font-size: 40px; line-height: 1; letter-spacing: -.04em; }
+.schedule-date strong { font-size: clamp(24px, 3vw, 36px); line-height: 1; letter-spacing: -.04em; white-space: nowrap; }
 .schedule-date > span { font-size: 12px; color: #D3CDC2; }
 .schedule-card-content { padding: 30px 28px; flex: 1; }
 .schedule-card-action { padding: 0 28px 24px; }
