@@ -389,6 +389,8 @@
     flex: 1;
 }
 #leaders .leadership-president-image { object-position: center 80%; }
+#leaders .leadership-patron-frame { aspect-ratio: 4 / 4.8; }
+#leaders .leadership-patron-image { object-fit: cover; object-position: center 45%; }
 #leaders .leadership-vice-president-image {
     position: absolute;
     inset: 0;

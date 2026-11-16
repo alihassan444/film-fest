@@ -169,9 +169,9 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
-                                <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/professional-male-avatar-illustrated.png') }}"
-                                        class="artists-image img-fluid" alt="Professional male avatar for Muhammad Baddi-u-Zaman, Lecturer &amp; Festival Patron">
+                                <div class="artists-image-wrap leadership-patron-frame">
+                                    <img src="{{ asset('frontend/images/leaders/muhammad-baddi-u-zaman.jpg') }}"
+                                        class="artists-image img-fluid leadership-patron-image" alt="Muhammad Baddi-u-Zaman, Lecturer &amp; Festival Patron">
                                 </div>
 
                                 <div class="leadership-details"><p class="leadership-role">Lecturer &amp; Festival Patron</p><h3 class="leadership-name">Muhammad Baddi-u-Zaman</h3></div>
