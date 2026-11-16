@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ticket;
+use App\Support\TicketPricing;
+use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Support\Facades\Storage;
@@ -12,12 +14,17 @@ class FrontendController extends Controller
     
     public function index()
     {
-        return view('index');
+        return response()->view('index', ['ticketPrices' => TicketPricing::options()])->header('Cache-Control', 'no-store');
     }
     
-    public function form()
+    public function form(Request $request)
     {
-        return view('form');
+        $tier = $request->query('tier', TicketPricing::defaultTier());
+        $options = TicketPricing::options();
+        if (!is_string($tier) || !isset($options[$tier]) || !$options[$tier]['available']) {
+            return redirect()->to(route('index').'#pricing')->withErrors(['ticket_tier' => 'This ticket option is no longer available. Please choose an available ticket.']);
+        }
+        return response()->view('form', ['ticketPrices' => $options, 'selectedTier' => $tier])->header('Cache-Control', 'no-store');
     }
 
     /**
@@ -31,8 +38,10 @@ class FrontendController extends Controller
     public function store(Request $request)
     {
         $request->merge(['payment_method' => $request->input('payment_method', 'bank')]);
+        $request->merge(['ticket_tier' => $request->input('ticket_tier', TicketPricing::defaultTier())]);
         // Validate the request
         $validated = $request->validate([
+            'ticket_tier' => ['required', Rule::in(array_keys(array_filter(TicketPricing::options(), fn ($option) => $option['available'])))],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255', 'unique:tickets,email'],
             'phone' => ['required', 'string', 'max:20'],
@@ -44,6 +53,7 @@ class FrontendController extends Controller
             'cash_amount' => ['exclude_unless:payment_method,cash', 'required', 'numeric', 'min:0.01', 'max:99999999.99', 'decimal:0,2'],
             'transaction_screenshot' => ['required_if:payment_method,bank', 'nullable', 'image', 'mimes:jpeg,jpg,png', 'max:5120'], // 5MB max
         ], [
+            'ticket_tier.in' => 'This ticket option is no longer available. Please choose an available ticket.',
             'email.unique' => 'This email address has already been used to purchase a ticket. Please use a different email address.',
             'email.required' => 'Email address is required.',
             'email.email' => 'Please provide a valid email address.',

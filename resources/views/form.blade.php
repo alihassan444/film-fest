@@ -12,6 +12,7 @@
         </header>
         <form class="custom-form ticket-form ticket-booking" action="{{ route('tickets.store') }}" method="post" enctype="multipart/form-data">
             @csrf
+            <input type="hidden" name="ticket_tier" value="{{ $selectedTier }}">
             @if ($errors->any())
                 <div class="booking-errors alert alert-danger" role="alert">
                     <strong>Please check your details</strong>
@@ -49,6 +50,15 @@
                     @endforeach
                 </div>
                 <div class="booking-email-note"><i class="bi bi-envelope-check" aria-hidden="true"></i><p>Use an email you check regularly. Your ticket confirmation will be sent there after verification.</p></div>
+                <section class="booking-safety" aria-labelledby="booking-safety-title">
+                    <h2 id="booking-safety-title"><i class="bi bi-shield-check" aria-hidden="true"></i> Prohibited Items &amp; Festival Safety</h2>
+                    <ul>
+                        <li>For everyone's safety, all attendees, including students, filmmakers, and visitors, are strictly prohibited from bringing drugs, alcohol, outside food or beverages, firearms, knives, explosives, or any other dangerous or restricted items into the festival venue.</li>
+                        <li>Anyone found carrying such items may be denied entry or removed from the premises.</li>
+                        <li>Participating filmmakers may also be disqualified, and their films may be withdrawn from screening.</li>
+                        <li>All attendees must comply with venue security checks and festival safety regulations.</li>
+                    </ul>
+                </section>
             </div>
             <div class="booking-payment">
                 <div class="booking-section-heading"><span>02</span><div><h2>Payment &amp; receipt</h2><p>Select bank transfer or cash paid at the ticket counter.</p></div></div>
