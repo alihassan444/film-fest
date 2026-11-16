@@ -16,6 +16,13 @@
 .booking-required-note { color: #6E6A60; font-size: 10px; margin-bottom: 18px; }
 .booking-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
 .booking-field { min-width: 0; }
+.booking-safety { margin-top: 28px; padding-top: 24px; border-top: 1px solid #D2C3A6; }
+.booking-safety h2 { color: #432813; font-size: 17px; line-height: 1.5; margin: 0 0 14px; }
+.booking-safety h2 i { color: #795a31; margin-right: 8px; }
+.booking-safety ul { margin: 0; padding-left: 20px; list-style: disc; }
+.booking-safety li { color: #59432F; font-size: 13px; line-height: 1.8; padding-left: 4px; margin-bottom: 12px; }
+.booking-safety li::marker { color: #795a31; }
+.booking-safety li:last-child { margin-bottom: 0; }
 .booking-payment-choice { margin: 0 0 26px; padding: 0; border: 0; min-width: 0; }
 .booking-payment-choice legend { float: none; width: auto; margin: 0 0 12px; color: #432813; font-size: 13px; font-weight: 700; }
 .payment-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }

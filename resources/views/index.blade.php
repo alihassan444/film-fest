@@ -141,62 +141,60 @@
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
                                     <img src="{{ asset('frontend/images/leaders/sikandar-javed-hod.jpeg') }}"
-                                        class="artists-image img-fluid" alt="Mr. Sikandar Javed, Head of Department">
+                                        class="artists-image img-fluid" alt="Sikanda Javed, Head of Department &amp; Festival Director">
                                 </div>
 
-                                <div class="leadership-details"><p class="leadership-role">Head of Department</p><h3 class="leadership-name">Mr. Sikandar Javed</h3></div>
+                                <div class="leadership-details"><p class="leadership-role">Head of Department &amp; Festival Director</p><h3 class="leadership-name">Sikanda Javed</h3></div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
                                     <img src="{{ asset('frontend/images/leaders/ali-sultan-director.jpeg') }}"
-                                        class="artists-image img-fluid" alt="Syed Ali Sultan, Festival Director">
+                                        class="artists-image img-fluid" alt="Syed Ali Sultan, Assistant Professor &amp; Festival Director">
                                 </div>
 
-                                <div class="leadership-details"><p class="leadership-role">Festival Director</p><h3 class="leadership-name">Syed Ali Sultan</h3></div>
+                                <div class="leadership-details"><p class="leadership-role">Assistant Professor &amp; Festival Director</p><h3 class="leadership-name">Syed Ali Sultan</h3></div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
                                     <img src="{{ asset('frontend/images/leaders/sir-umar.png') }}"
-                                        class="artists-image img-fluid" alt="Assistant Professor">
+                                        class="artists-image img-fluid" alt="Mian Umar Farooq, Assistant Professor &amp; Festival Patron">
                                 </div>
 
-                                <div class="leadership-details"><p class="leadership-role">Assistant Professor</p><h3 class="leadership-name">Mr. Umar Farooq (Asst. Prof)</h3></div>
+                                <div class="leadership-details"><p class="leadership-role">Assistant Professor &amp; Festival Patron</p><h3 class="leadership-name">Mian Umar Farooq</h3></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="artists-thumb h-100">
+                                <div class="artists-image-wrap">
+                                    <img src="{{ asset('frontend/images/leaders/faisal-nadeem.jpg') }}"
+                                        class="artists-image img-fluid" alt="Muhammad Baddi-u-Zaman, Lecturer &amp; Festival Patron">
+                                </div>
+
+                                <div class="leadership-details"><p class="leadership-role">Lecturer &amp; Festival Patron</p><h3 class="leadership-name">Muhammad Baddi-u-Zaman</h3></div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
                                     <img src="{{ asset('frontend/images/leaders/haziq-ammar.jpg') }}"
-                                        class="artists-image img-fluid leadership-president-image" alt="Haziq Ammar, President">
+                                        class="artists-image img-fluid leadership-president-image" alt="Haziq Ammar, Festival President">
                                 </div>
 
-                                <div class="leadership-details"><p class="leadership-role">President</p><h3 class="leadership-name">Haziq Ammar</h3></div>
+                                <div class="leadership-details"><p class="leadership-role">Festival President</p><h3 class="leadership-name">Haziq Ammar</h3></div>
                             </div>
                         </div>
-                        @if(false) {{-- Fest President card temporarily hidden. --}}
-                        <div class="col-lg-4 col-md-6 col-12 mb-4">
-                            <div class="artists-thumb h-100">
-                                <div class="artists-image-wrap">
-                                    <img src="{{ asset('frontend/images/leaders/faisal-nadeem.jpg') }}"
-                                        class="artists-image img-fluid" alt="Fest President">
-                                </div>
-
-                                <div class="leadership-details"><p class="leadership-role">Fest President</p><h3 class="leadership-name">Faisal Nadeem</h3></div>
-                            </div>
-                        </div>
-                        @endif
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
                                     <img src="{{ asset('frontend/images/leaders/mareeha-saqi-portrait.jpeg') }}"
-                                        class="artists-image img-fluid leadership-vice-president-image" alt="Mareeha Saqi, Vice President">
+                                        class="artists-image img-fluid leadership-vice-president-image" alt="Mareeha Saqi, Festival Vice President">
                                 </div>
 
-                                <div class="leadership-details"><p class="leadership-role">Vice President</p><h3 class="leadership-name">Mareeha Saqi</h3></div>
+                                <div class="leadership-details"><p class="leadership-role">Festival Vice President</p><h3 class="leadership-name">Mareeha Saqi</h3></div>
                             </div>
                         </div>
                     </div>
@@ -216,7 +214,7 @@
                         <img src="frontend/images/leaders/sir-umar.png"
                             class="artists-image img-fluid">
 
-                        <div class="leadership-details"><p class="leadership-role">Assistant Professor</p><h3 class="leadership-name">Mr. Umar Farooq (Asst. Prof)</h3></div>
+                        <div class="leadership-details"><p class="leadership-role">Assistant Professor &amp; Festival Patron</p><h3 class="leadership-name">Mian Umar Farooq</h3></div>
                     </div>
                 </div> --}}
 
@@ -248,7 +246,7 @@
                         <div class="schedule-card-action">
                             <a class="btn schedule-book-btn" href="{{ route('submission') }}">Submission <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                         </div>
-                        <div class="schedule-card-bottom"><i class="bi bi-geo-alt" aria-hidden="true"></i> IAC Amphitheatre</div>
+                        <div class="schedule-card-bottom"><i class="bi bi-geo-alt" aria-hidden="true"></i> IAC Auditorium</div>
                     </article>
                     <div class="schedule-closing schedule-submission" id="submission" aria-label="Film submissions">
                         <p><i class="bi bi-stars" aria-hidden="true"></i> Share your vision. Submit your film or video for festival consideration.</p>
@@ -263,7 +261,7 @@
                         <div class="schedule-card-content">
                             <span class="schedule-event-icon" aria-hidden="true"><i class="bi bi-music-note-beamed"></i></span>
                             <p class="schedule-category">An evening of rhythm &amp; soul</p>
-                            <h3>Qawali Night</h3>
+                            <h3>Social Night</h3>
                             <p class="schedule-description">Come together for an evening of music to close the festival.</p>
                             <div class="schedule-time"><i class="bi bi-clock" aria-hidden="true"></i><span>Timing to be announced</span></div>
                         </div>
@@ -283,29 +281,39 @@
             <div class="pricing-heading text-center">
                 <span class="pricing-eyebrow">Your seat at the festival</span>
                 <h2 id="pricing-title">Ticket Pricing</h2>
-                <p>Tickets are Rs 1,500 in advance or Rs 2,000 at the ticket window.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-5 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="festival-price-card price-card-featured">
+                        <div class="price-card-top"><span class="price-card-number">01 /</span><span class="price-card-badge">Lowest price</span></div>
+                        <h3>Early Bird</h3><p class="price-card-window">16 November – 4 December 2026</p>
+                        <div class="price-card-amount"><span>Rs</span> 1,200</div>
+                        <p class="price-card-unit">per ticket</p>
+                        <div class="price-card-divider" aria-hidden="true"></div>
+                        <p class="price-card-description">Book early for the festival's lowest ticket price.</p>
+                        @if($ticketPrices['early']['available'])<a href="{{ route('form', ['tier' => 'early']) }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Early Bird</span></a>@else<button type="button" class="btn price-card-button" disabled>Booking closed</button>@endif
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
                     <article class="festival-price-card">
-                        <div class="price-card-top"><span class="price-card-number">01 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
-                        <h3>Advance Ticket</h3>
+                        <div class="price-card-top"><span class="price-card-number">02 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
+                        <h3>Advance Ticket</h3><p class="price-card-window">5–10 December 2026</p>
                         <div class="price-card-amount"><span>Rs</span> 1,500</div>
                         <p class="price-card-unit">per ticket</p>
                         <div class="price-card-divider" aria-hidden="true"></div>
                         <p class="price-card-description">Book your festival ticket in advance.</p>
-                        <a href="{{ route('form') }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Advance Ticket</span></a>
+                        @if($ticketPrices['advance']['available'])<a href="{{ route('form', ['tier' => 'advance']) }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Advance Ticket</span></a>@else<button type="button" class="btn price-card-button" disabled>Booking closed</button>@endif
                     </article>
                 </div>
-                <div class="col-lg-5 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12">
                     <article class="festival-price-card">
-                        <div class="price-card-top"><span class="price-card-number">02 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
-                        <h3>Ticket Window</h3>
+                        <div class="price-card-top"><span class="price-card-number">03 /</span><i class="bi bi-ticket-perforated" aria-hidden="true"></i></div>
+                        <h3>Ticket Window</h3><p class="price-card-window">IAC main gate</p>
                         <div class="price-card-amount"><span>Rs</span> 2,000</div>
                         <p class="price-card-unit">per ticket</p>
                         <div class="price-card-divider" aria-hidden="true"></div>
                         <p class="price-card-description">Buy your ticket at the festival ticket counter.</p>
-                        <a href="{{ route('form') }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Ticket Window</span></a>
+                        @if($ticketPrices['window']['available'])<a href="{{ route('form', ['tier' => 'window']) }}" class="btn price-card-button">Buy Ticket <i class="bi bi-arrow-up-right" aria-hidden="true"></i><span class="visually-hidden"> — Ticket Window</span></a>@else<button type="button" class="btn price-card-button" disabled>Booking closed</button>@endif
                     </article>
                 </div>
             </div>
