@@ -83,8 +83,8 @@
                     @error('cash_amount')<p class="booking-upload-error">{{ $message }}</p>@enderror
                 </div>
                 <div class="booking-bank" id="bank-payment-details" @if(old('payment_method') === 'cash') hidden @endif>
-                    <div class="booking-bank-header"><span><i class="bi bi-bank" aria-hidden="true"></i> Bank transfer</span><strong>*******</strong></div>
-                    <dl><div><dt>Account holder</dt><dd>****** ******</dd></div><div><dt>Account number</dt><dd class="booking-account-number">***********</dd></div></dl>
+                    <div class="booking-bank-header"><span><i class="bi bi-bank" aria-hidden="true"></i> Bank transfer</span><strong>JazzCash</strong></div>
+                    <dl><div><dt>Account holder</dt><dd>Ali Ghazi</dd></div><div><dt>Account number</dt><dd class="booking-account-number">03258933332</dd></div></dl>
                     <a href="{{ route('index') }}#pricing">View ticket prices <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
                 </div>
                 <label class="booking-receipt-label" for="ticket-form-account-screenshot">Payment receipt <span id="receipt-required-label">{{ old('payment_method') === 'cash' ? '(optional)' : '*' }}</span></label>
