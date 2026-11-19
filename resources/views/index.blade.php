@@ -112,7 +112,7 @@
                 <div class="society-visual about-text-wrap">
                     <figure class="society-photo">
                         <div class="society-frame-label"><span><i class="bi bi-camera-reels" aria-hidden="true"></i> IAC Film &amp; TV Society</span><span aria-hidden="true">01 / Our people</span></div>
-                        <img src="{{ asset('frontend/images/leaders/team.png') }}" alt="Film and TV Society team gathered at the Institute for Art and Culture" loading="lazy" width="960" height="540">
+                        <img src="{{ asset('frontend/images/leaders/festival-community.jpeg') }}" alt="IAC Film Festival community gathered together on stage" loading="lazy" width="1047" height="901">
                         <figcaption>Different perspectives. One creative community.</figcaption>
                     </figure>
                     <div class="society-legacy"><strong>05<span>years of creativity</span></strong><p>Growing together through cinema, collaboration, and the art of storytelling.</p></div>
