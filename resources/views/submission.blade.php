@@ -41,6 +41,7 @@
             </article>
         </div>
         @include('partials.social-night-section')
+        @include('partials.official-partners')
         <section class="submission-rules" aria-labelledby="submission-rules-title">
             <div class="submission-fees-heading">
                 <div><span class="submission-eyebrow">Before you submit</span><h2 id="submission-rules-title">Film submission guidelines</h2></div>

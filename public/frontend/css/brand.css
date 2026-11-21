@@ -140,6 +140,15 @@
 .footer-venue-eyebrow { display: flex; align-items: center; gap: 8px; color: #CEAC73; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; margin-bottom: 20px; }
 .footer-venue-details h2 { color: #F8F3E1; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; margin-bottom: 28px; }
 .submission-rules { margin-top: 56px; }
+.submission-partners { display: flex; align-items: center; gap: 28px 48px; margin-top: 40px; padding: 24px 0; border-top: 1px solid #cdbb9c; border-bottom: 1px solid #cdbb9c; }
+.submission-partners-heading { flex: 0 0 auto; }
+.submission-partners-heading .submission-eyebrow { font-size: 9px; margin-bottom: 8px; }
+.submission-page .submission-partners h2 { margin: 0; font-size: 23px; letter-spacing: -.025em; }
+.submission-partner-list { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; margin: 0; padding: 0; list-style: none; }
+.submission-partner { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 14px 26px; border: 1px solid #c6ad85; border-radius: 14px; background: #fff8e9; }
+.submission-partner img { display: block; width: 110px; height: 44px; object-fit: contain; }
+.submission-partner span { color: #6b5032; font-size: 10px; font-weight: 600; letter-spacing: .04em; }
+@media (max-width: 575px) { .submission-partners { flex-direction: column; align-items: flex-start; gap: 20px; } }
 .submission-rules-list { margin: 0; }
 .submission-rules-list > div { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(0, 3fr); gap: 16px 32px; padding: 22px 0; border-bottom: 1px solid #D2C3A6; }
 .submission-rules-list dt { color: #2A180D; font-weight: 700; }
